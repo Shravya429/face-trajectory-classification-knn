@@ -1,0 +1,573 @@
+
+(object Petal
+    version    	42
+    _written   	"Rose 4.5.8054a"
+    charSet    	0)
+
+(object Design "Logical View"
+    is_unit    	TRUE
+    is_loaded  	TRUE
+    quid       	"5E75431301F1"
+    defaults   	(object defaults
+	rightMargin 	0.250000
+	leftMargin 	0.250000
+	topMargin  	0.250000
+	bottomMargin 	0.500000
+	pageOverlap 	0.250000
+	clipIconLabels 	TRUE
+	autoResize 	TRUE
+	snapToGrid 	TRUE
+	gridX      	16
+	gridY      	16
+	defaultFont 	(object Font
+	    size       	10
+	    face       	"Arial"
+	    bold       	FALSE
+	    italics    	FALSE
+	    underline  	FALSE
+	    strike     	FALSE
+	    color      	0
+	    default_color 	TRUE)
+	showMessageNum 	1
+	showClassOfObject 	TRUE
+	notation   	"Unified")
+    root_usecase_package 	(object Class_Category "Use Case View"
+	quid       	"5E75431301F3"
+	exportControl 	"Public"
+	global     	TRUE
+	logical_models 	(list unit_reference_list
+	    (object Class "User"
+		quid       	"5E75431903CA"
+		stereotype 	"Actor")
+	    (object UseCase "select image"
+		quid       	"5E75432401C2")
+	    (object UseCase "select video"
+		quid       	"5E75432A030A")
+	    (object UseCase "satrt webcam"
+		quid       	"5E75433100B8")
+	    (object UseCase "detect object"
+		quid       	"5E75433C0182")
+	    (object Association "$UNNAMED$0"
+		quid       	"5E75434A03A3"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$1"
+			quid       	"5E75434B0290"
+			supplier   	"Use Case View::select image"
+			quidu      	"5E75432401C2"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$2"
+			quid       	"5E75434B0291"
+			supplier   	"Use Case View::User"
+			quidu      	"5E75431903CA")))
+	    (object Association "$UNNAMED$3"
+		quid       	"5E75434D03C1"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$4"
+			quid       	"5E75434F03A5"
+			supplier   	"Use Case View::select video"
+			quidu      	"5E75432A030A"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$5"
+			quid       	"5E75434F03A6"
+			supplier   	"Use Case View::User"
+			quidu      	"5E75431903CA")))
+	    (object Association "$UNNAMED$6"
+		quid       	"5E75435201E0"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$7"
+			quid       	"5E75435301E4"
+			supplier   	"Use Case View::satrt webcam"
+			quidu      	"5E75433100B8"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$8"
+			quid       	"5E75435301E5"
+			supplier   	"Use Case View::User"
+			quidu      	"5E75431903CA")))
+	    (object Association "$UNNAMED$9"
+		quid       	"5E7543560354"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$10"
+			quid       	"5E75435703A4"
+			supplier   	"Use Case View::detect object"
+			quidu      	"5E75433C0182"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$11"
+			quid       	"5E75435703A5"
+			supplier   	"Use Case View::User"
+			quidu      	"5E75431903CA")))
+	    (object Mechanism @1
+		logical_models 	(list unit_reference_list
+		    (object Object "User"
+			quid       	"5E7543C502C2"
+			collaborators 	(list link_list
+			    (object Link
+				quid       	"5E7543DA031B"
+				supplier   	"Application3."
+				quidu      	"5E7543CB00FF"
+				messages   	(list Messages
+				    (object Message "1.Select Image"
+					quid       	"5E7543DA031C"
+					frequency  	"Aperiodic"
+					synchronization 	"Simple"
+					dir        	"FromClientToSupplier"
+					sequence   	""
+					ordinal    	0)
+				    (object Message "2.Select Video"
+					quid       	"5E7543EA01AB"
+					frequency  	"Aperiodic"
+					synchronization 	"Simple"
+					dir        	"FromClientToSupplier"
+					sequence   	""
+					ordinal    	1)
+				    (object Message "3.Start Webcam"
+					quid       	"5E7543F6018B"
+					frequency  	"Aperiodic"
+					synchronization 	"Simple"
+					dir        	"FromClientToSupplier"
+					sequence   	""
+					ordinal    	2)
+				    (object Message "4.Detect object"
+					quid       	"5E75441500A3"
+					frequency  	"Aperiodic"
+					synchronization 	"Simple"
+					dir        	"FromClientToSupplier"
+					sequence   	""
+					ordinal    	3))))
+			persistence 	"Transient"
+			multi      	FALSE)
+		    (object Object "Application3."
+			quid       	"5E7543CB00FF"
+			persistence 	"Transient"
+			multi      	FALSE))))
+	logical_presentations 	(list unit_reference_list
+	    (object UseCaseDiagram "Main"
+		quid       	"5E7543130236"
+		title      	"Main"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list
+		    (object UseCaseView "Use Case View::select image" @2
+			location   	(1520, 144)
+			label      	(object ItemLabel
+			    Parent_View 	@2
+			    location   	(1520, 282)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	633
+			    justify    	0
+			    label      	"select image")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"5E75432401C2"
+			height     	118
+			autoResize 	TRUE)
+		    (object UseCaseView "Use Case View::select video" @3
+			location   	(1552, 448)
+			label      	(object ItemLabel
+			    Parent_View 	@3
+			    location   	(1552, 586)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	633
+			    justify    	0
+			    label      	"select video")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"5E75432A030A"
+			height     	118
+			autoResize 	TRUE)
+		    (object UseCaseView "Use Case View::satrt webcam" @4
+			location   	(1584, 736)
+			label      	(object ItemLabel
+			    Parent_View 	@4
+			    location   	(1584, 874)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	633
+			    justify    	0
+			    label      	"satrt webcam")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"5E75433100B8"
+			height     	118
+			autoResize 	TRUE)
+		    (object ClassView "Class" "Use Case View::User" @5
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(704, 640)
+			label      	(object ItemLabel
+			    Parent_View 	@5
+			    location   	(704, 800)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	327
+			    justify    	0
+			    label      	"User")
+			icon       	"Actor"
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"5E75431903CA"
+			annotation 	8
+			autoResize 	TRUE)
+		    (object AssociationViewNew "$UNNAMED$0" @6
+			location   	(1080, 408)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5E75434A03A3"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$1" @7
+				Parent_View 	@6
+				location   	(344, -88)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5E75434B0290"
+				client     	@6
+				supplier   	@2
+				line_style 	0)
+			    (object RoleView "$UNNAMED$2" @8
+				Parent_View 	@6
+				location   	(344, -88)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5E75434B0291"
+				client     	@6
+				supplier   	@5
+				line_style 	0)))
+		    (object AssociationViewNew "$UNNAMED$3" @9
+			location   	(1101, 546)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5E75434D03C1"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$4" @10
+				Parent_View 	@9
+				location   	(365, 50)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5E75434F03A5"
+				client     	@9
+				supplier   	@3
+				line_style 	0)
+			    (object RoleView "$UNNAMED$5" @11
+				Parent_View 	@9
+				location   	(365, 50)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5E75434F03A6"
+				client     	@9
+				supplier   	@5
+				line_style 	0)))
+		    (object AssociationViewNew "$UNNAMED$6" @12
+			location   	(1116, 682)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5E75435201E0"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$7" @13
+				Parent_View 	@12
+				location   	(380, 186)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5E75435301E4"
+				client     	@12
+				supplier   	@4
+				line_style 	0)
+			    (object RoleView "$UNNAMED$8" @14
+				Parent_View 	@12
+				location   	(380, 186)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5E75435301E5"
+				client     	@12
+				supplier   	@5
+				line_style 	0)))
+		    (object UseCaseView "Use Case View::detect object" @15
+			location   	(1584, 1008)
+			label      	(object ItemLabel
+			    Parent_View 	@15
+			    location   	(1584, 1146)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	633
+			    justify    	0
+			    label      	"detect object")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"5E75433C0182"
+			height     	118
+			autoResize 	TRUE)
+		    (object AssociationViewNew "$UNNAMED$9" @16
+			location   	(1116, 810)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5E7543560354"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$10" @17
+				Parent_View 	@16
+				location   	(380, 314)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5E75435703A4"
+				client     	@16
+				supplier   	@15
+				line_style 	0)
+			    (object RoleView "$UNNAMED$11" @18
+				Parent_View 	@16
+				location   	(380, 314)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5E75435703A5"
+				client     	@16
+				supplier   	@5
+				line_style 	0)))))
+	    (object InteractionDiagram "NewDiagram"
+		mechanism_ref 	@1
+		quid       	"5E7543C302A2"
+		title      	"NewDiagram"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list
+		    (object InterObjView "User" @19
+			location   	(448, 224)
+			font       	(object Font
+			    underline  	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@19
+			    location   	(448, 224)
+			    fill_color 	12058623
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	282
+			    justify    	0
+			    label      	"User")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"5E7543C502C2"
+			width      	300
+			height     	993
+			icon_height 	0
+			icon_width 	0
+			annotation 	1
+			Focus_Of_Control 	(object Focus_Of_Control "" @20
+			    location   	(448, 384)
+			    line_color 	3342489
+			    InterObjView 	@19
+			    height     	120
+			    y_coord    	60
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @21
+			    location   	(448, 576)
+			    line_color 	3342489
+			    InterObjView 	@19
+			    height     	120
+			    y_coord    	60
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @22
+			    location   	(448, 768)
+			    line_color 	3342489
+			    InterObjView 	@19
+			    height     	120
+			    y_coord    	60
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @23
+			    location   	(448, 976)
+			    line_color 	3342489
+			    InterObjView 	@19
+			    height     	152
+			    y_coord    	92
+			    Nested     	FALSE))
+		    (object InterObjView "Application3." @24
+			location   	(1520, 224)
+			font       	(object Font
+			    underline  	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@24
+			    location   	(1520, 224)
+			    fill_color 	12058623
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	282
+			    justify    	0
+			    label      	"Application3.")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"5E7543CB00FF"
+			width      	300
+			height     	993
+			icon_height 	0
+			icon_width 	0
+			annotation 	1
+			Focus_Of_Control 	(object Focus_Of_Control "" @25
+			    location   	(1520, 384)
+			    line_color 	3342489
+			    InterObjView 	@24
+			    height     	60
+			    y_coord    	0
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @26
+			    location   	(1520, 576)
+			    line_color 	3342489
+			    InterObjView 	@24
+			    height     	60
+			    y_coord    	0
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @27
+			    location   	(1520, 768)
+			    line_color 	3342489
+			    InterObjView 	@24
+			    height     	60
+			    y_coord    	0
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @28
+			    location   	(1520, 1008)
+			    line_color 	3342489
+			    InterObjView 	@24
+			    height     	60
+			    y_coord    	0
+			    Nested     	FALSE))
+		    (object InterMessView "" @29
+			location   	(0, 384)
+			label      	(object SegLabel @30
+			    Parent_View 	@29
+			    location   	(984, 340)
+			    quidu      	"5E7543DA031C"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	272
+			    justify    	0
+			    label      	"1.Select Image"
+			    pctDist    	0.500000
+			    height     	45
+			    orientation 	0)
+			line_color 	3342489
+			client     	@19
+			supplier   	@24
+			Focus_Src  	@20
+			Focus_Entry 	@25
+			origin     	(464, 384)
+			terminus   	(1504, 384)
+			ordinal    	0)
+		    (object InterMessView "" @31
+			location   	(0, 576)
+			label      	(object SegLabel @32
+			    Parent_View 	@31
+			    location   	(984, 532)
+			    quidu      	"5E7543EA01AB"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	266
+			    justify    	0
+			    label      	"2.Select Video"
+			    pctDist    	0.500000
+			    height     	45
+			    orientation 	0)
+			line_color 	3342489
+			client     	@19
+			supplier   	@24
+			Focus_Src  	@21
+			Focus_Entry 	@26
+			origin     	(464, 576)
+			terminus   	(1504, 576)
+			ordinal    	1)
+		    (object InterMessView "" @33
+			location   	(0, 768)
+			label      	(object SegLabel @34
+			    Parent_View 	@33
+			    location   	(984, 724)
+			    quidu      	"5E7543F6018B"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	300
+			    justify    	0
+			    label      	"3.Start Webcam"
+			    pctDist    	0.500000
+			    height     	45
+			    orientation 	0)
+			line_color 	3342489
+			client     	@19
+			supplier   	@24
+			Focus_Src  	@22
+			Focus_Entry 	@27
+			origin     	(464, 768)
+			terminus   	(1504, 768)
+			ordinal    	2)
+		    (object InterMessView "" @35
+			location   	(0, 1008)
+			label      	(object SegLabel @36
+			    Parent_View 	@35
+			    location   	(984, 964)
+			    quidu      	"5E75441500A3"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	278
+			    justify    	0
+			    label      	"4.Detect object"
+			    pctDist    	0.500000
+			    height     	45
+			    orientation 	0)
+			line_color 	3342489
+			client     	@19
+			supplier   	@24
+			Focus_Src  	@23
+			Focus_Entry 	@28
+			origin     	(464, 1008)
+			terminus   	(1504, 1008)
+			ordinal    	3)))))
+    root_category 	(object Class_Category "Logical View"
+	quid       	"5E75431301F2"
+	exportControl 	"Public"
+	global     	TRUE
+	subsystem  	"Component View"
+	quidu      	"5E75431301F4"
+	logical_models 	(list unit_reference_list)
+	logical_presentations 	(list unit_reference_list
+	    (object ClassDiagram "Main"
+		quid       	"5E75431301FC"
+		title      	"Main"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list))))
+    root_subsystem 	(object SubSystem "Component View"
+	quid       	"5E75431301F4"
+	physical_models 	(list unit_reference_list)
+	physical_presentations 	(list unit_reference_list
+	    (object Module_Diagram "Main"
+		quid       	"5E7543130235"
+		title      	"Main"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list))))
+    process_structure 	(object Processes
+	quid       	"5E75431301F5"
+	ProcsNDevs 	(list
+	    (object Process_Diagram "Deployment View"
+		quid       	"5E75431301F7"
+		title      	"Deployment View"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list))))
+    properties 	(object Properties
+	quid       	"5E75431301F6"))
